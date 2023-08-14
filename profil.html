@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            border-bottom: 2px solid #0056b3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Ajustement pour le bouton Se déconnecter */
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .profil-info {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .offer {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .offer-number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 10px 0;
+        }
+
+        .offer-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .offer-button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .offer-button:hover {
+            background-color: #0056b3;
+        }
+
+        .user-name {
+            float: right;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .logout-button {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        .logout-button:hover {
+            background-color: #fff;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <img src="site.png" alt="Logo TBPF" class="logo">
+        Profil de <span class="user-name" id="userName"></span>
+        <a href="index.html" class="logout-button">Se déconnecter</a>
+    </h1>
+    <div class="profil-info">
+        <div class="offer">
+            <p class="offer-number">Offre 1</p>
+            <img src="offre1.jpg" alt="Offre 1" class="offer-image">
+            <a href="page_de_paiement1.html" class="offer-button">Acheter offre1</a>
+        </div>
+        <div class="offer">
+            <p class="offer-number">Offre 2</p>
+            <img src="offre2.jpg" alt="Offre 2" class="offer-image">
+            <a href="page_de_paiement2.html" class="offer-button">Acheter offre2</a>
+        </div>
+        <!-- Ajoutez d'autres images d'offres numérotées ici -->
+    </div>
+
+    <script>
+        const prenom = localStorage.getItem("prenom");
+        document.getElementById("userName").textContent = prenom;
+    </script>
+</body>
+</html>
